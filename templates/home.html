@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block title %}
+PulseLifeDonors
+{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/home.css">
+<div id="box1">
+	<div id="box12">
+		<img id="img1" src="/static/blood1.jpg">
+	</div>
+	<div id="box11">
+		Become a part of our blood donor community.<br>
+		Giving blood is giving life.
+	</div>
+</div>
+
+<div id="box2">
+	<div id="box21">
+		A moment of your time, a lifetime for someone else.<br>
+		For a better tomorrow.
+	</div>
+	<div id="box22">
+		<img id="img2" src="/static/blood2.jpg">
+	</div>
+</div>
+
+<div id="box1">
+	<div id="box12">
+		<img id="img1" src="/static/blood3.jpg">
+	</div>
+	<div id="box11">
+		Our blood donation website serves as a central platform for individuals and organizations committed to saving lives through blood donation. Here, you can find information about the importance of blood donation, upcoming blood drives, and locations for donation centers. 
+	</div>
+</div>
+
+<div id="testimonial">
+	<center>
+		<figure class="snip1390">
+			<img src="/static/dicaprio.jpg" alt="profile-sample3"
+				class="profile" />
+			<figcaption>
+				<h2>Bhavya Gulati</h2>
+				<h4>Student at NSUT</h4>
+				<blockquote>Today, I donated blood through the Blood Donation Center's website, and it was a seamless and rewarding experience. 
+                    The online platform made scheduling easy, and the welcoming staff at the center put me at ease. 
+                    Knowing my donation can save lives is incredibly fulfilling.
+
+                </blockquote>
+			</figcaption>
+		</figure>
+	</center>
+	<center>
+		<figure class="snip1390 hover"><img
+				src="/static/grey.jpg" alt="profile-sample5"
+				class="profile" />
+			<figcaption>
+				<h2>Anshuman Sinha</h2>
+				<h4>Resident of Dwarka</h4>
+				<blockquote>Donating through the Blood Donation Center's website was easy and fulfilling.
+                    Scheduling online was a breeze, and the welcoming staff made the donation process smooth. 
+                    Knowing that a single donation can save lives is truly impactful. Join in – it's a small act that makes a big difference.
+
+
+				</blockquote>
+			</figcaption>
+		</figure>
+	</center>
+	<center>
+		<figure class="snip1390"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg"
+				alt="profile-sample6" class="profile" />
+			<figcaption>
+				<h2>Parul Gupta</h2>
+				<h4>Teacher at St Thomas</h4>
+				<blockquote>Sharing life via the Blood Donation Center's website was as smooth as a summer breeze. The simple online scheduling and the warm welcome at the center made the experience delightful.
+                    It's quite remarkable to realize that a mere pint of blood has the power to rescue lives.<br><br>
+				</blockquote>
+			</figcaption>
+		</figure>
+	</center>
+</div>
+<footer style="margin-left: 5px; margin-right: 5px;" class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col">
+				<h4>Company</h4>
+				<ul>
+					<li><a href="{{ url_for('home_page') }}">Home</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Get Help</h4>
+				<ul>
+					<li><a href="{{ url_for('record_entry') }}">Record Entry</a></li>
+					<li><a href="{{ url_for('fetchEntry') }}">Record Fetch</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Others</h4>
+				<ul>
+					<li><a href="https://www.mohfw.gov.in/">MoHFW</a></li>
+					<li><a href="https://ima-india.org/ima/">IMA</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Follow Us</h4>
+				<div class="social-links">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+{% endblock %}

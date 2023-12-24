@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}
+Blood Bank Data
+{% endblock %}
+{% block content %}
+<style>
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #333;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<div style="margin-top: 70px;"></div>
+
+<h1>Blood Bank Data</h1>
+
+<input type="text" id="searchInput" placeholder="Prompt" onkeyup="searchTable()">
+<br><br>
+
+<table id="bloodBankTable">
+    <tr>
+        <th>BloodBankID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Contact Info</th>
+        <th>Current Inventory Level</th>
+        <th>Max Capacity</th>
+        <th>Address</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<script>
+    function searchTable() {
+        // Declare variables
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("bloodBankTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) {
+            var rowMatches = false;  // Flag to check if any cell in the row matches the search query
+            for (j = 0; j <= 6; j++) {
+                td = tr[i].getElementsByTagName("td")[j];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        rowMatches = true;  // Set the flag if any cell in the row matches
+                    }
+                }
+            }
+            // Set the display property based on whether any cell in the row matches the search query
+            tr[i].style.display = rowMatches ? "" : "none";
+        }
+    }
+</script>
+{% endblock %}

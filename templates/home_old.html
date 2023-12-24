@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Database Management Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Record Entry</h1>
+        <ul>
+            <li><a href="{{ url_for('Donor') }}">Enter Donor Information</a></li><br>
+            <li><a href="{{ url_for('BloodBank') }}">Enter Blood Bank Information</a></li><br>
+            <li><a href="{{ url_for('Donation') }}">Enter Donation Information</a></li><br>
+            <li><a href="{{ url_for('Patient') }}">Enter Patient Information</a></li><br>
+            <li><a href="{{ url_for('StaffMember') }}">Enter Staff Member Information</a></li><br>
+            <li><a href="{{ url_for('BloodTestResult') }}">Enter Blood Test Result Information</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <h1>Record Fetch</h1>
+
+        <ul>
+            <li><a href="{{ url_for('fetchDonor') }}">Fetch Donor Information</a></li><br>
+            <li><a href="{{ url_for('fetchBB') }}">Fetch Blood Bank Information</a></li><br>
+            <li><a href="{{ url_for('fetchDonation') }}">Fetch Donation Information</a></li><br>
+            <li><a href="{{ url_for('fetchPatient') }}">Fetch Patient Information</a></li><br>
+            <li><a href="{{ url_for('fetchStaffMember') }}">Fetch Staff Member Information</a></li><br>
+            <li><a href="{{ url_for('fetchResult') }}">Fetch Blood Test Result Information</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

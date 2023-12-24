@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}
+Record Entry - Blood Donation Center
+{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/record_entry.css">
+<div style="height: 50px;"></div>
+<header>
+    <h1>Record Entry</h1>
+</header>
+<nav id="entry">
+    <ul>
+        <li><a href="{{ url_for('Donor') }}" class="btn">Enter Donor Information</a></li>
+        <li><a href="{{ url_for('BloodBank') }}" class="btn">Enter Blood Bank Information</a></li>
+        <li><a href="{{ url_for('Donation') }}" class="btn">Enter Donation Information</a></li>
+        <li><a href="{{ url_for('Patient') }}" class="btn">Enter Patient Information</a></li>
+        <li><a href="{{ url_for('StaffMember') }}" class="btn">Enter Staff Member Information</a></li>
+        <li><a href="{{ url_for('BloodTestResult') }}" class="btn">Enter Blood Test Result Information</a></li>
+    </ul>
+</nav>
+<main>
+    <section class="instructions">
+        <h2>Choose an option above to enter information</h2>
+        <p>Select the relevant category to begin recording essential information for blood donation and patient
+            care.</p>
+    </section>
+</main>
+<footer style="margin-left: 5px; margin-right: 5px;" class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col">
+				<h4>Company</h4>
+				<ul>
+					<li><a href="{{ url_for('home_page') }}">Home</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Get Help</h4>
+				<ul>
+					<li><a href="{{ url_for('record_entry') }}">Record Entry</a></li>
+					<li><a href="{{ url_for('fetchEntry') }}">Record Fetch</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Others</h4>
+				<ul>
+					<li><a href="https://www.mohfw.gov.in/">MoHFW</a></li>
+					<li><a href="https://ima-india.org/ima/">IMA</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Follow Us</h4>
+				<div class="social-links">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock %}
